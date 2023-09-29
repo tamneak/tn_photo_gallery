@@ -21,7 +21,7 @@ class PhotoProvider extends ImageProvider<PhotoProvider> {
     );
   }
 
-  Future<ui.Codec> _loadAsync(PhotoProvider key, DecoderCallback decode) async {
+  Future<ui.Codec> _loadAsync(PhotoProvider key, decode) async {
     assert(key == this);
     final file = await PhotoGallery.getFile(
         mediumId: mediumId, mediumType: MediumType.image, mimeType: mimeType);

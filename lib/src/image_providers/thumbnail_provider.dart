@@ -27,8 +27,7 @@ class ThumbnailProvider extends ImageProvider<ThumbnailProvider> {
     );
   }
 
-  Future<ui.Codec> _loadAsync(
-      ThumbnailProvider key, DecoderCallback decode) async {
+  Future<ui.Codec> _loadAsync(ThumbnailProvider key,  decode) async {
     assert(key == this);
     final bytes = await PhotoGallery.getThumbnail(
       mediumId: mediumId,
